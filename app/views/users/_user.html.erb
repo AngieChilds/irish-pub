@@ -1,10 +1,20 @@
 <li>
-  <%= gravatar_for user, size: 50 %>
-  <%= link_to user.name, user %>
-    
-    
+  <%= gravatar_for user, size: 50 %> |
+  <%= link_to user.name, user %> |
+  <%= link_to user.status, user  %> |
+      
     <% if current_user.admin? && !current_user?(user) %>
-    | <%= link_to "delete", user, method: :delete,
+  <%= link_to user.email, user %>
+  
+<div class="dropdown">
+  <button class="dropbtn">Status</button>
+  <div class="dropdown-content">
+    <%= select("user", "status",[["patron", 0], ["staff", 1], ["manager", 2], ["admin", 3]]) %> 
+  </div>
+</div>
+    
+  |
+    <%= link_to image_tag("ic_delete_forever.png"), user, method: :delete,
                                   data: { confirm: "You sure?" } %>
   <% end %>
     
