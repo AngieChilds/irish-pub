@@ -22,3 +22,6 @@
 
 .byebug_history
 /nbproject/private/
+
+# Ignore uploaded test images.
+/public/uploads
