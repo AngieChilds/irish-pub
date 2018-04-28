@@ -1,3 +1,4 @@
+  <div class="center jumbotron">
 <% provide(:title, "Log in") %>
 <h1>Log in</h1>
 
@@ -15,9 +16,10 @@
         <%= f.check_box :remember_me %>
         <span>Remember me on this device</span>
       <% end %>
-      <%= f.submit "Log in", class: "btn btn-primary" %>
+      <%= f.submit "Log in", class: "btn btn-lg btn-primary" %>
     <% end %>
 
     <p>New user? <%= link_to "Sign up now!", signup_path %></p>
   </div>
 </div>
+  </div>

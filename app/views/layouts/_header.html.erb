@@ -1,13 +1,17 @@
 
-<header class="navbar navbar-fixed-top navbar-inverse">
+<header class="navbar navbar-fixed-top myNavbar">
   <div class="container">
-    <%= link_to ("Home"), root_path, id: "logo" %>
+    
+    <%= link_to image_tag("irishrock-transp24.png", alt: "logo"), '/', class: 'navbar-brand' %>
+      
       <nav>
         <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to image_tag("home white.png"),   root_path %></li>
-          <li><%= link_to image_tag("phone-white.png"),   contact_path %></li>
+           
+          
+          <li><%= link_to image_tag("phone-red.png"),   contact_path %></li>
+          <li><%= link_to image_tag("home red.png"),   root_path %></li>
             <% if logged_in? %>
-          <li><%= link_to image_tag("ic_group_white_24dp.png"), users_path %></li>
+          <li><%= link_to image_tag("group-red.png"), users_path %></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               Account <b class="caret"></b>
